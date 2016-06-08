@@ -1,0 +1,34 @@
+{
+  "name": "angulartics-webtrends-analytics",
+  "version": "1.0.7",
+  "description": "Webtrends Analytics plugin for Angulartics",
+  "keywords": [
+    "webtrends",
+    "analytics",
+    "plugin",
+    "angular",
+    "angulartics"
+  ],
+  "author": "jibbyjames <jjbuckley.91@gmail.com> (https://github.com/jibbyjames)",
+  "contributors": [],
+  "main": "lib/index.js",
+  "scripts": {
+    "clean": "if exist dist rd dist /s /q",
+    "prebuild": "npm run clean",
+    "build": "mkdir dist && uglifyjs lib/angulartics-webtrends-analytics.js --compress --source-map dist/angulartics-webtrends-analytics.min.js.map --source-map-root .. --source-map-url ../dist/angulartics-webtrends-analytics.min.js.map -o dist/angulartics-webtrends-analytics.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jibbyjames/angulartics-webtrends-analytics"
+  },
+  "bugs": {
+    "url": "https://github.com/jibbyjames/angulartics-webtrends-analytics/issues"
+  },
+  "license": "MIT",
+  "peerDependencies": {
+    "angulartics": "^1.0.3"
+  },
+  "devDependencies": {
+    "uglify-js": "^2.4.23"
+  }
+}
